@@ -1,0 +1,91 @@
+Test 
+
+- Test generali sull'aspetto dell'app e sul apertura/ chiusura senza problemi 
+
+- Possibilita di scegliere il file dal primo pulsante scegli 
+    -Deve venir salvata nella prima casella per il testo e non deve essere modificata se si chiude la finestra senza scegliere nulla
+
+- Possibilita di scegliere la directory dal secondo pulsante scegli 
+    -Deve venir salvata nella seconda casella per il testo e non deve essere modificata se si chiude la finestra di scelta senza scegliere nulla
+
+- Funziomaneto pulsante "template" 
+    -Deve salvare il file template nella directory indicata dalla seconda casella di testo 
+    -Se esiste gia un file denominato "Template.xlsx" nela directory il file verra salvato con il nome "Template (n).xlsx" 
+    dove n incrementa sempre di 1 
+    -Se il download va a bun fine stampa un messaggio a schermo conntenente anche la cartella dove è stato salvato il file (deve essere comprensibile)
+    -Se la directory nella seconda casella di testo non è valida stampa a schermo un messaggio di errore (deve essere comprensibile)
+
+- Funziomaneto del pulsante "Download"
+    -Deve convertire il file clsx indicato nella prima casella di testo e salvare il file csv risultante nella directory indicata
+     dalla seconda casella di testo 
+    -Se il download va a bun fine stampa un messaggio a schermo conntenente anche la cartella dove è stato salvato il file (deve essere comprensibile)
+    -Se il download non viene effettuato stampa a schermo un messaggio di errore (deve essere comprensibile)
+
+    -Il programma elimina tutte gli spazzi vuoti all'inizio e alla fine di ogni cella 
+
+    -TIPI DI CONTROLLI SUL FILE xlsx:
+        -Se il file non è il template (non ha la prima riga del template) stampa a schermo un errore (deve essere comprensibile)
+        -Se il file è vuoto (ha solo la prima riga del template e nessun altra )  stampa a schermo un errore (deve essere comprensibile)
+        
+        -CONTROLLI SULLE LINE :
+        -Se la lina è piu lunga di 23 celle (ha piu campi del dovuto) stampa a schermo un errore (deve essere comprensibile)
+
+        -CONTROLLI SU MULTIPLE CELLE:
+        -Se le prime 5 celle sono vuote (mancano dei campi obligatori ) stampa a schermo un errore (contiene la cella sbagliata)
+        
+        -CONTROLLI SULLE SINGOLE CELLE DI OGNI RIGA:
+        
+        Cognome
+        -Se il cognome è piu lungo di 50 caratteri stampa a schermo un errore (contiene la cella sbagliata)
+        Nome
+        -Se il nome è piu lungo di 50 caratteri stampa a schermo un errore (contiene la cella sbagliata)
+        Sesso
+        -Il programma converte "s" o "m" minuscoli in maiuscoli 
+        -Se il sesso è diverso da "S" o "M" stampa a schermo un errore (contiene la cella sbagliata)
+        Data di nascita 
+        -Il programma controlla se la data è nel formato GG/MM/AAAA es (01/01/1900) altrimenti stampa a schermo un errore (contiene la cella sbagliata) 
+        Provincia di nascita 
+        -Il programma rende la cella tutta maiuscola
+        -Se la provincia non è una provincia valida (controllando una lista di tutte le provincie italiane ) stampa a schermo un errore (contiene la cella sbagliata)
+        Comune di nascita 
+        -Se il comune è piu lungo di 65 caratteri stampa a schermo un errore (contiene la cella sbagliata)
+        CodiceFiscale 
+        -Se il codice fiscale è inserito ma ha un numero di caratteri diverso da 16 stampa a schermo un errore (contiene la cella sbagliata)
+        Indirizzo di residenza
+        -Se l'indirizzo è piu lungo di 50 caratteri stampa a schermo un errore (contiene la cella sbagliata)
+        CAP di residenza 
+        -Se non è vuoto e non è lungo 5 caratteri stampa a schermo un errore (contiene la cella sbagliata)
+        -Se non è composto solo da numeri stampa a schermo un errore (contiene la cella sbagliata)
+        Provincia di residenza
+        -il programma rende la cella tutta maiuscola
+        -Se la provincia non è una provincia valida (controllando una lista di tutte le provincie italiane ) stampa a schermo un errore (contiene la cella sbagliata)
+        Comune di residenza
+        -Se il comune è piu lungo di 65 caratteri stampa a schermo un errore (contiene la cella sbagliata)
+        Email
+        -Se è piu lunga di 50 caratteri stampa a schermo un errore (contiene la cella sbagliata)
+        -Se la cella non contiene almeno una "@" o un "." stampa a schermo un errore (contiene la cella sbagliata)
+        (si puo rendere migliore se necessario controllando la correttezza formale dell'email)
+        Telefono abitazione
+        -Se è piu lungo di 12 caratteri e non contiene solo numeri stampa a schermo un errore (contiene la cella sbagliata)
+        Cellulare
+        -Se è piu lungo di 12 caratteri e non contiene solo numeri stampa a schermo un errore (contiene la cella sbagliata)
+        Fax abitazione
+        -Se è piu lungo di 12 caratteri e non contiene solo numeri stampa a schermo un errore (contiene la cella sbagliata)
+        Telefono ufficio
+        -Se è piu lungo di 12 caratteri e non contiene solo numeri stampa a schermo un errore (contiene la cella sbagliata)
+        Fax ufficio
+        -Se è piu lungo di 12 caratteri e non contiene solo numeri stampa a schermo un errore (contiene la cella sbagliata)
+        Qualifica sociale 
+        -Il programma rende la cella tutta maiuscola
+        -Se la qualifica non è tra la lista di qualifiche della tabella nella documentazione stampa a schermo un errore (contiene la cella sbagliata)
+        Attivita sociale
+        -Se la cella non è vuota e è piu lunga di 10 caratteri stampa a schermo un errore (contiene la cella sbagliata)
+        Tipo di certificato medico
+        -il programma rende la cella tutta maiuscola 
+        -Se il certificato medico non è vuoto ed è diverso da N o M stampa a schermo un errore (contiene la cella sbagliata)
+        data di rilascio certificato medico 
+        -Il programma controlla se la data è nel formato GG/MM/AAAA es (01/01/1900) altrimenti stampa a schermo un errore (contiene la cella sbagliata) 
+        Qualifica sportiva
+        -Se la qualifica non è tra la lista di qualifiche della tabella nella documentazione stampa a schermo un errore (contiene la cella sbagliata)
+        Attivita sportiva
+        -Se è piu lunga di 65 caratteri stampa a schermo un errore (contiene la cella sbagliata)
