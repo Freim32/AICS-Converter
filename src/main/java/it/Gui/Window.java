@@ -98,7 +98,7 @@ public class Window extends JFrame {
     final Color versionTextColor = WHITE;   //Color of VersionText 
     final Font versionTextFont = Roboto12;  //Font of VersionText
     //AuthorText
-    final Rectangle authorTextBounds= new Rectangle(660,435,130,40);    //VersionText size and position
+    final Rectangle authorTextBounds= new Rectangle(650,435,180,40);    //VersionText size and position
     final String author = "By Matteo Benvenuti"; //App version  
     final Color authorTextColor = BLUE;   //Color of VersionText 
     final Font authorTextFont = Roboto12;  //Font of VersionText

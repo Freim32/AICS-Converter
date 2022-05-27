@@ -2,7 +2,6 @@ package it.Class;
 //java.io
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 //Java.utils
 import java.util.ArrayList;
 //org.org.apache.poi
@@ -24,11 +23,12 @@ public class ExcelReader {
 
     //Method that reads the excel files and returns a list of lists that contain the row/columns of the file
     public  ArrayList<ArrayList<String>> ReadExcel(File Path) throws Exception{
+        try{
         dataFormatter = new DataFormatter();//For format cell value
         data = new ArrayList<ArrayList<String>>();//List which will contain the rows/columns
         //Read file from Path -->
-        try{
         FileInputStream excelFile = new FileInputStream(Path);
+        
         try (Workbook workbook = new XSSFWorkbook(excelFile)) {
             Sheet sheet = workbook.getSheetAt(0);
             //<-- Read file from Path 
@@ -68,8 +68,8 @@ public class ExcelReader {
         }catch(Exception e){
             throw new Exception("Il file Excel non è in un formato valido");
         }
-    }catch (FileNotFoundException e){
-        throw new Exception("File o directory inesistente");
-    }
+        }catch (Exception e){
+            throw new Exception("Percorso del file excel non valido");
+        }
     }
 }

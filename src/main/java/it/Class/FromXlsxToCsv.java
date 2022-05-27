@@ -5,6 +5,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import org.apache.commons.compress.utils.FileNameUtils;
 
 
@@ -33,6 +36,7 @@ public class FromXlsxToCsv {
             csvWriter.WriteCsv(csvPath, data);
 
         } catch (Exception e) {
+            //JOptionPane.showMessageDialog(new JFrame() ,e.getMessage());
             throw new Exception(e.getMessage());
         }
     }
